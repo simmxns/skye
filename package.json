@@ -5,11 +5,13 @@
 	"scripts": {
 		"build": "rollup -c",
 		"dev": "rollup -c -w",
-		"start": "sirv public --no-clear",
-		"clean": "rm -rf public/build/"
+		"start": "sirv static --no-clear",
+		"clean": "rm -rf static/build/"
 	},
 	"devDependencies": {
+		"@rollup/plugin-alias": "3.1.9",
 		"@rollup/plugin-commonjs": "17.0.0",
+		"@rollup/plugin-image": "2.1.1",
 		"@rollup/plugin-node-resolve": "11.0.0",
 		"autoprefixer": "10.4.0",
 		"postcss": "8.4.5",

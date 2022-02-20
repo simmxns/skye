@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"target": "es6",
+		"baseUrl": ".",
+		"paths": {
+			"@lib/*": [ "src/lib/*" ]
+		}
+	},
+	"include": [ 
+		"src/**/*.js",
+		"src/**/*.d.ts",
+ 		"src/**/*.svelte"
+	]
+}

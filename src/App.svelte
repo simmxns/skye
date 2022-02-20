@@ -1,15 +1,29 @@
 <script>
-	const name = "Simon";
+	import Header from '@lib/Header.svelte'
+	import svg from '@assets/bg.svg'
 </script>
 
-<div class="flex items-center justify-center rounded-xl bg-cyan-900 p-5 shadow-ctm">
-	<h1 class="text-3xl font-semibold text-cyan-600">
-		Hi {name}!
-	</h1>
+<div id="app">
+	<Header />
 </div>
 
 <style lang="postcss" global>
 	@tailwind base;
 	@tailwind components;
 	@tailwind utilities;
+
+	#app {
+		@apply 
+			font-apple 
+			w-full 
+			h-full 
+			aspect-[9/16] 
+			rounded-lg 
+			border 
+			border-solid
+			border-black
+			bg-degrade
+			bg-no-repeat
+			bg-fixed;
+	}
 </style>

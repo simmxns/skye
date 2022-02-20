@@ -1,10 +1,15 @@
 module.exports = {
-  content: ['./public/index.html', './src/**/*.svelte'],
+  content: ["./public/index.html", "./src/**/*.svelte"],
   theme: {
+		fontFamily: {
+			apple: [ 
+				'-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', 'sans-serif'
+			]
+		},
     extend: {
-      boxShadow: {
-        'ctm': '8px 8px 25px -5px rgba(8, 145, 178, 0.50)'
-      }
+			backgroundImage: {
+				"degrade": "url(https://products.ls.graphics/mesh-gradients/images/29.-Pale-Cornflower-Blue_1.jpg)"
+			}
     },
   },
   plugins: [],
