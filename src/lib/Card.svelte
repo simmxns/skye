@@ -15,7 +15,7 @@
 		sunny: 'https://ssl.gstatic.com/onebox/weather/48/sunny.png',
 		rainy: 'https://ssl.gstatic.com/onebox/weather/48/rain_light.png'
 	}
-	const src = imgForecast["cloudy"]
+	const src = imgForecast["party"]
 </script>
 
 <div class="w-full flex flex-col items-center justify-center mt-6">
