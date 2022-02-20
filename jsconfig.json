@@ -1,9 +1,11 @@
 {
 	"compilerOptions": {
-		"target": "es6",
+		"target": "esnext",
 		"baseUrl": ".",
 		"paths": {
-			"@lib/*": [ "src/lib/*" ]
+			"@lib/*": [ "src/lib/*" ],
+			"@assets/*": [ "./static/*" ],
+			"@icons/*": [ "src/icons/*" ]
 		}
 	},
 	"include": [ 

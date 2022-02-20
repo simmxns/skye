@@ -1,6 +1,5 @@
 <script>
-	import logo from '@assets/logo.png'
-
+	//import logo from '@assets/logo.png'
 	const user = { loggedIn: false }
 
 	function logger() {
@@ -8,12 +7,12 @@
 	}
 </script>
 
-<header class="w-full py-2 px-3">
+<header class="w-full pt-4 px-5">
 	<nav class="flex items-center justify-between">
-		<div class="flex items-center justify-center rounded bg-black/10 w-9 h-9 shadow-lg">
+		<div class="flex items-center justify-center rounded bg-black/10 w-10 h-10 shadow-lg text-xl">
 			<i class='bx bx-chevron-left'></i>
 		</div>
-		<div class="flex items-center justify-center rounded bg-black/10 w-9 h-9 shadow-lg">
+		<div class="flex items-center justify-center rounded bg-black/10 w-10 h-10 shadow-lg text-lg">
 			<i class='bx bxs-user'></i>
 		</div>
 	</nav>
