@@ -1,5 +1,5 @@
 <script>
-	//import logo from '@assets/logo.png'
+	import logo from '@assets/logo.png'
 	const user = { loggedIn: false }
 
 	function logger() {
@@ -9,16 +9,16 @@
 
 <header class="w-full pt-4 px-5">
 	<nav class="flex items-center justify-between">
-		<div class="flex items-center justify-center rounded bg-black/10 w-10 h-10 shadow-lg text-xl">
-			<i class='bx bx-chevron-left'></i>
+		<div class="cursor-pointer flex items-center px-4 rounded bg-black/10 h-10 shadow-lg">
+			<img src={logo} alt="" class="w-[25px] h-[25px] rounded mr-3" />
+			<h1>Weather</h1>
 		</div>
-		<div class="flex items-center justify-center rounded bg-black/10 w-10 h-10 shadow-lg text-lg">
+		<div class="cursor-pointer flex items-center justify-center px-4 rounded bg-black/10 w-10 h-10 shadow-lg text-lg">
 			<i class='bx bxs-user'></i>
 		</div>
 	</nav>
 </header>
 <!--
-		<img src={logo} alt="" class="w-[25px] h-[25px]" />
 		<ul class="flex align-center">
 			<li class="mr-4"><a href="/map">Map</a></li>
 			<li><a href="/docs">API</a></li>

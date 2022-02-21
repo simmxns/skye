@@ -34,7 +34,6 @@
 			bg-center
 			bg-no-repeat
 			bg-cover
-			bg-fixed
 			text-gray-200;
 	}
 </style>
