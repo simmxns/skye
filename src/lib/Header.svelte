@@ -18,8 +18,8 @@
 		</div>
 	</nav>
 </header>
-<!--
-		<ul class="flex align-center">
+
+		<!--<ul class="flex align-center">
 			<li class="mr-4"><a href="/map">Map</a></li>
 			<li><a href="/docs">API</a></li>
 		</ul>
@@ -40,6 +40,4 @@
 				Sign Up
 			</button>
 		{/if}
-		</div>
--->
-
+		</div>-->

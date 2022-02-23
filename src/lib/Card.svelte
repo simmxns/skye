@@ -24,10 +24,10 @@
 		class="flex items-center justify-evenly flex-col w-[88%] h-96 bg-black/8 shadow-global shadow-black/10 rounded-md backdrop-blur-[50px]"
 	>
 		<div class="flex flex-col items-center w-full px-6">
+			<h2 class="text-xl font-bold">{timezone}</h2>
 			<p class="text-xs font-light text-gray-200 mb-5">{time}</p>
 			<div class="flex flex-row w-[inherit] justify-between">
 				<div class="flex flex-col items-start ">
-					<h2 class="text-xl font-bold">{timezone}</h2>
 					<p class="font-bold text-5xl">{temp}º</p>
 				</div>
 				<div class="flex items-center justify-center flex-col">

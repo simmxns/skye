@@ -3,7 +3,7 @@
 	import Greet from '@lib/Greet.svelte'
 	import Card from '@lib/Card.svelte'
 	import Title from '@lib/Title.svelte';
-import Week from '@lib/Week.svelte';
+	import Week from '@lib/Week.svelte';
 </script>
 
 <div id="app">
