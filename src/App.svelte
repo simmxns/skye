@@ -3,15 +3,19 @@
 	import Greet from '@lib/Greet.svelte'
 	import Card from '@lib/Card.svelte'
 	import Title from '@lib/Title.svelte';
+import Week from '@lib/Week.svelte';
 </script>
 
 <div id="app">
 	<Header />
-	<div class="pl-5 mt-5">
+	<div class="welcome">
 		<Greet />
 		<Title />
 	</div>
-	<Card />
+	<div class="week">
+		<Week />
+		<Card />
+	</div>
 </div>
 
 <style lang="postcss" global>
@@ -35,5 +39,15 @@
 			bg-no-repeat
 			bg-cover
 			text-gray-200;
+	}
+	.week {
+		@apply 
+			flex
+			items-center
+			flex-col
+			mt-10;
+	}
+	.welcome {
+		@apply pl-5 mt-5;
 	}
 </style>

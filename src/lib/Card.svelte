@@ -1,6 +1,6 @@
 <script>
 	const weather = {
-		timezone: 'Argentina, Buenos Aires',
+		timezone: 'Buenos Aires',
 		time: 'Sunday 20, 2022',
 		title: 'Partly cloudy',
 		temp: '29',
@@ -16,44 +16,46 @@
 		rainy: 'https://ssl.gstatic.com/onebox/weather/48/rain_light.png'
 	}
 	const src = weatherIcons['party']
-	const { time, country, title, temp, wind, humidity, feeling } = weather
+	const { time, timezone, title, temp, wind, humidity, feeling } = weather
 </script>
 
-<div class="w-full flex flex-col items-center justify-center mt-6">
-	<div class="flex items-center justify-evenly flex-col w-[88%] h-96 bg-black/8 mt-4 shadow-global shadow-black/10 rounded-md backdrop-blur-[50px]">
-		<div class="flex flex-row ">
-			<div class="flex flex-col items-start">
-				<div class="flex items-center">
-					<img {src} alt="">
-					<p class="ml-2 font-light whitespace-nowrap">{title}</p>
+<div class="w-full flex flex-col items-center justify-center">
+	<div
+		class="flex items-center justify-evenly flex-col w-[88%] h-96 bg-black/8 shadow-global shadow-black/10 rounded-md backdrop-blur-[50px]"
+	>
+		<div class="flex flex-col items-center w-full px-6">
+			<p class="text-xs font-light text-gray-200 mb-5">{time}</p>
+			<div class="flex flex-row w-[inherit] justify-between">
+				<div class="flex flex-col items-start ">
+					<h2 class="text-xl font-bold">{timezone}</h2>
+					<p class="font-bold text-5xl">{temp}º</p>
 				</div>
-				<p class="font-bold text-5xl">{temp}º</p>
+				<div class="flex items-center justify-center flex-col">
+					<img {src} alt="" class="w-14 h-14" />
+					<p class="font-medium text-sm whitespace-nowrap">{title}</p>
+				</div>
 			</div>
-			<div class="text-right flex flex-col items-end">
-				<p class="text-xs font-light text-gray-200">{time}</p>
-				<h2 class="text-xl font-bold">{country}</h2>
-			</div>
-			
-			</div>
-		<div class="flex justify-around items-center bg-[#202124]/30 w-[90%] mx-auto rounded-md p-4 backdrop-blur-[50px]">
+		</div>
+		<div
+			class="flex justify-around items-center bg-[#202124]/30 h-40 w-[90%] mx-auto rounded-md p-4 backdrop-blur-[50px]"
+		>
 			<div class="text-center p-3">
-				<i class='bx bx-wind bx-sm text-white'></i>
+				<i class="bx bx-wind bx-sm text-white" />
 				<p>Wind</p>
 				<strong class="text-xs font-light">{wind}km/h</strong>
 			</div>
-			<div class="border-x border-[#fff]/30 h-12"></div>
+			<div class="border-x border-[#fff]/30 h-12" />
 			<div class="text-center p-3">
-				<i class='bx bxs-droplet bx-sm text-sky-400'></i>
+				<i class="bx bxs-droplet bx-sm text-sky-400" />
 				<p>Humidity</p>
 				<strong class="text-xs font-light">{humidity}%</strong>
 			</div>
-			<div class="border-x border-[#fff]/30 h-12"></div>
+			<div class="border-x border-[#fff]/30 h-12" />
 			<div class="text-center p-3">
-				<i class='bx bxs-thermometer bx-sm text-red-500'></i>
+				<i class="bx bxs-thermometer bx-sm text-red-500" />
 				<p>Feeling</p>
 				<strong class="text-xs font-light">{feeling}º</strong>
 			</div>
 		</div>
 	</div>
 </div>
-
