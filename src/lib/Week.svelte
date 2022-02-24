@@ -1,92 +1,73 @@
 <script>
-  let current = "saturday";
+	let current = 'saturday'
+	function setCurrent(curr) {
+		current = curr
+	}
 </script>
 
-<div class="days flex justify-between w-full mb-5 px-7 text-xs">
-  <button
-    class="sunday {current === 'sunday' ? 'selected' : ''}"
-	on:click="{() => current = 'sunday'}"
-  >
-    S
-  </button>
-  <button
-    class="monday {current === 'monday' ? 'selected' : ''}"
-	on:click="{() => current = 'monday'}"
-  >
-    M
-  </button>
-  <button
-    class="tuesday {current === 'tuesday' ? 'selected' : ''}"
-	on:click="{() => current = 'tuesday'}"
-  >
-    T
-  </button>
-  <button
-    class="wednesday {current === 'wednesday' ? 'selected' : ''}"
-	on:click="{() => current = 'wednesday'}"
-  >
-    W
-  </button>
-  <button
-    class="thursday {current === 'thursday' ? 'selected' : ''}"
-	on:click="{() => current = 'thursday'}"
-  >
-    T
-  </button>
-  <button
-    class="friday {current === 'friday' ? 'selected' : ''}"
-	on:click="{() => current = 'friday'}"
-  >
-    F
-  </button>
-  <button
-    class="saturday {current === 'saturday' ? 'selected' : ''}"
-	on:click="{() => current = 'saturday'}"
-  >
-    S
-  </button>
+<div class="days flex justify-between w-full mb-5 text-xs">
+	<button
+		class="sunday {current === 'sunday' ? 'selected' : ''}"
+		on:click={() => setCurrent('sunday')}
+	>
+		<p>S</p>
+	</button>
+	<button
+		class="monday {current === 'monday' ? 'selected' : ''}"
+		on:click={() => setCurrent('monday')}
+	>
+		M
+	</button>
+	<button
+		class="tuesday {current === 'tuesday' ? 'selected' : ''}"
+		on:click={() => setCurrent('tuesday')}
+	>
+		T
+	</button>
+	<button
+		class="wednesday {current === 'wednesday' ? 'selected' : ''}"
+		on:click={() => setCurrent('wednesday')}
+	>
+		W
+	</button>
+	<button
+		class="thursday {current === 'thursday' ? 'selected' : ''}"
+		on:click={() => setCurrent('thursday')}
+	>
+		T
+	</button>
+	<button
+		class="friday {current === 'friday' ? 'selected' : ''}"
+		on:click={() => setCurrent('friday')}
+	>
+		F
+	</button>
+	<button
+		class="saturday {current === 'saturday' ? 'selected' : ''}"
+		on:click={() => setCurrent('saturday')}
+	>
+		S
+	</button>
 </div>
 
 <style lang="postcss">
-	.days{
+	.days {
 		@apply flex items-center justify-evenly flex-row w-[88%] h-10 shadow-slate-900 rounded-md;
 	}
-  .sunday,
-  .monday,
-  .tuesday,
-  .wednesday,
-  .thursday,
-  .friday,
-  .saturday {
-    opacity: 0.5;
-	@apply bg-indigo-400;
-	@apply py-1 px-3 rounded-full;
-
-  }
-
-  .sunday:hover,
-  .monday:hover,
-  .tuesday:hover,
-  .wednesday:hover,
-  .thursday:hover,
-  .friday:hover,
-  .saturday:hover {
-	@apply bg-indigo-500;
-	@apply py-1 text-xs px-4 rounded-full;
-	box-shadow: 0px 0px 0px 3px rgb(105 117 225);
-    opacity: 1;
-
-	
-	
-  }
-  .selected {
-    opacity: 1;
-	/* font-size: large; */
-	@apply bg-indigo-400;
-	@apply py-1 px-4 rounded-full;
-	box-shadow: 0px 0px 0px 3px rgb(105 117 225);
-  }
-  .selected:hover {
-	/* font-size: large; */
-  }
+	.sunday,
+	.monday,
+	.tuesday,
+	.wednesday,
+	.thursday,
+	.friday,
+	.saturday {
+		@apply bg-indigo-400 opacity-50 py-1 px-4 rounded-full hover:opacity-100 hover:bg-indigo-500;
+	}
+	.selected {
+		@apply bg-indigo-500 opacity-100;
+		/* box-shadow: 0px 0px 0px 3px rgb(105 117 225); */
+	}
+	.letter {
+		@apply opacity-50
+	}
 </style>

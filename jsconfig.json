@@ -1,16 +1,12 @@
 {
 	"compilerOptions": {
 		"target": "esnext",
-		"baseUrl": ".",
-		"paths": {
-			"@lib/*": [ "src/lib/*" ],
-			"@assets/*": [ "./static/*" ],
-			"@icons/*": [ "src/icons/*" ]
-		}
+		"module": "commonjs"
 	},
-	"include": [ 
-		"src/**/*.js",
-		"src/**/*.d.ts",
- 		"src/**/*.svelte"
+	"include": [
+		"src/*", "static/*"
+	],
+	"exclude": [
+		"static/build"
 	]
 }

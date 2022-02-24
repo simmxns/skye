@@ -1113,10 +1113,10 @@ svelte-preprocess@4.10.1:
     sorcery "^0.10.0"
     strip-indent "^3.0.0"
 
-svelte@3.4.2:
-  version "3.4.2"
-  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.4.2.tgz#55e34d7a53f9a732387dbf0fcb68e2fa4b598c93"
-  integrity sha512-sh7UCIBAgRrNxDx3afw+sKipY2ilpNNsBHXQXtwU481ZWGidAOowcZw1JrfB86hpLJvGqxkzBJqCQoGGtA35qA==
+svelte@3.46.4:
+  version "3.46.4"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.46.4.tgz#0c46bc4a3e20a2617a1b7dc43a722f9d6c084a38"
+  integrity sha512-qKJzw6DpA33CIa+C/rGp4AUdSfii0DOTCzj/2YpSKKayw5WGSS624Et9L1nU1k2OVRS9vaENQXp2CVZNU+xvIg==
 
 tailwindcss@3.0.7:
   version "3.0.7"

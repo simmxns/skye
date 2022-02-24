@@ -26,7 +26,7 @@
 		<div class="flex flex-col items-center w-full px-6">
 			<h2 class="text-xl font-bold">{timezone}</h2>
 			<p class="text-xs font-light text-gray-200 mb-5">{time}</p>
-			<div class="flex flex-row w-[inherit] justify-between">
+			<div class="flex flex-row w-[inherit] items-center justify-between">
 				<div class="flex flex-col items-start ">
 					<p class="font-bold text-5xl">{temp}º</p>
 				</div>
