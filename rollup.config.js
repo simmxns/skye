@@ -60,7 +60,9 @@ export default {
 		alias({
 			entries: [
 				{ find: '@assets', replacement: path.resolve(projectRootDir, 'static') },
-				{ find: '@lib', replacement: path.resolve(projectRootDir, 'src/lib') }
+				{ find: '@lib', replacement: path.resolve(projectRootDir, 'src/lib') },
+				{ find: '@helpers', replacement: path.resolve(projectRootDir, 'src/helpers') },
+				{ find: '@hooks', replacement: path.resolve(projectRootDir, 'src/hooks') }
 			]
 		}),
 		image(),

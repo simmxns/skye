@@ -1,113 +1,62 @@
 <script>
-	let current = 'sunday'
-	import { onMount } from "svelte";
-	onMount(() => {
-		const index = document.querySelector("#index");
-		
-	});
-	function setCurrent(curr) {
-		current = curr
-	}
+	import E from '@helpers/getElement'
+	import { getX } from '@helpers/getX'
+	import { useCurrent } from '@hooks/useCurrent'
+	import { onMount } from 'svelte'
+
+	const { current, onCurrent } = useCurrent('monday')
 	
-	const setX = (e) => {
-		const x = e.target.offsetLeft; 
-		index.style.setProperty("left", `${x}px`);
-		console.log(e);
-	};
-	function clickHanler(param){
-		setX(event)
-		setCurrent(param)
+	onMount(() => {
+		const index = E('#index')
+	})
+
+	function onClickHandler(param) {
+		getX(event, index)
+		onCurrent(param)
+		console.log(current)
 	}
 </script>
 
 <div class="days">
-	<button on:click={() => clickHanler("sunday")} class="x {current === 'sunday' ? 'selected' : ''}" id="sunday"><p>SU</p></button>
-	<button on:click={() => clickHanler("monday")} class="x {current === 'monday' ? 'selected' : ''}" id="monday"><p>MO</p></button>
-	<button on:click={() => clickHanler("tuesday")} class="x {current === 'tuesday' ? 'selected' : ''}" id="tuesday"><p>TU</p></button>
-	<button on:click={() => clickHanler("wednesday")} class="x {current === 'wednesday' ? 'selected' : ''}" id="wednesday"><p>WE</p></button>
-	<button on:click={() => clickHanler("thursday")} class="x {current === 'thursday' ? 'selected' : ''}" id="thursday"><p>TH</p></button>
-	<button on:click={() => clickHanler("friday")} class="x {current === 'friday' ? 'selected' : ''}" id="friday"><p>FR</p></button>
-	<button on:click={() => clickHanler("saturday")} class="x {current === 'saturday' ? 'selected' : ''}" id="saturday"><p>SA</p></button>
+	<div class="lettersWrapper">
+		<p class="letters">S</p>
+		<p class="letters">M</p>
+		<p class="letters">T</p>
+		<p class="letters">W</p>
+		<p class="letters">T</p>
+		<p class="letters">F</p>
+		<p class="letters">S</p>
+	</div>
 	<button id="index" />
+	<div class="daysWrapper">
+		<button on:click={() => onClickHandler('sunday')} class="x" id="sunday" />
+		<button on:click={() => onClickHandler('monday')} class="x" id="monday" />
+		<button on:click={() => onClickHandler('tuesday')} class="x" id="tuesday" />
+		<button on:click={() => onClickHandler('wednesday')} class="x" id="wednesday" />
+		<button on:click={() => onClickHandler('thursday')} class="x" id="thursday" />
+		<button on:click={() => onClickHandler('friday')} class="x" id="friday" />
+		<button on:click={() => onClickHandler('saturday')} class="x" id="saturday" />
+	</div>
 </div>
 
 <style lang="postcss">
-	p{
-		@apply flex items-center justify-center;
-		pointer-events: none
-		/* z-index: 2 ; */
-
+	.letters {
+		@apply w-[42px] h-[22px] py-1 px-4 grid place-content-center;
 	}
-  #index {
-	  @apply bg-indigo-500 opacity-100 py-1 px-4 rounded-2xl;
-	  position: absolute;
-	  width: 45.77px;
-	  height: 24px;
-	  left: 0px;
-	  transition: left 0.5s cubic-bezier(0.950, 0.050, 0.795, 0.035);
-	  z-index: 0;
-  }
-  .days {
-    @apply flex items-center flex-row w-[88%] h-10 shadow-slate-900 rounded-md justify-between mb-5 text-xs;
-    position: relative;
-  }
-  .x {
-    @apply bg-indigo-400 opacity-50 py-1 px-4 rounded-full hover:opacity-50 hover:bg-indigo-500;
-	width: 45.77px;
-	height: 24px;
-	z-index: 1;
-
-  }
-  .selected {
-	  transition: background-color 3s  cubic-bezier(0.950, 0.050, 0.795, 0.035);
-    @apply bg-indigo-500 opacity-100;
-    /* box-shadow: 0px 0px 0px 3px rgb(105 117 225); */
-  }
+	#index {
+		@apply bg-indigo-500 opacity-100 py-1 px-4 bottom-0 rounded-2xl w-[42px] h-[22px] absolute left-0 z-10;
+		transition: left 0.55s ease;
+	}
+	.days {
+		@apply flex-col w-[88%] shadow-slate-900 rounded-md mb-5 text-xs relative;
+	}
+	.x {
+		@apply bg-indigo-400 opacity-50 py-1 px-4 rounded-full w-[42px] h-[22px] hover:opacity-50 hover:bg-indigo-500;
+	}
+	.lettersWrapper {
+		@apply flex absolute bottom-0 gap-[5.78px] z-20  pointer-events-none;
+	}
+	.daysWrapper {
+		@apply flex absolute bottom-0 gap-[5.78px];
+	}
 </style>
-
-
-<!-- 
-<div class="days flex justify-between w-full mb-5 text-xs">
-	<button
-		class="sunday {current === 'sunday' ? 'selected' : ''}"
-		on:click={() => setCurrent('sunday')}
-	>
-		<p>S</p>
-	</button>
-	<button
-		class="monday {current === 'monday' ? 'selected' : ''}"
-		on:click={() => setCurrent('monday')}
-	>
-		M
-	</button>
-	<button
-		class="tuesday {current === 'tuesday' ? 'selected' : ''}"
-		on:click={() => setCurrent('tuesday')}
-	>
-		T
-	</button>
-	<button
-		class="wednesday {current === 'wednesday' ? 'selected' : ''}"
-		on:click={() => setCurrent('wednesday')}
-	>
-		W
-	</button>
-	<button
-		class="thursday {current === 'thursday' ? 'selected' : ''}"
-		on:click={() => setCurrent('thursday')}
-	>
-		T
-	</button>
-	<button
-		class="friday {current === 'friday' ? 'selected' : ''}"
-		on:click={() => setCurrent('friday')}
-	>
-		F
-	</button>
-	<button
-		class="saturday {current === 'saturday' ? 'selected' : ''}"
-		on:click={() => setCurrent('saturday')}
-	>
-		S
-	</button>
-</div> -->
