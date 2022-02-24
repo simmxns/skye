@@ -13,7 +13,6 @@
 	function onClickHandler(param) {
 		getX(event, index)
 		onCurrent(param)
-		console.log(current)
 	}
 </script>
 
@@ -48,15 +47,15 @@
 		transition: left 0.55s ease;
 	}
 	.days {
-		@apply flex-col w-[88%] shadow-slate-900 rounded-md mb-5 text-xs relative;
+		@apply flex items-center justify-center w-[90%] mb-5 relative;
 	}
 	.x {
 		@apply bg-indigo-400 opacity-50 py-1 px-4 rounded-full w-[42px] h-[22px] hover:opacity-50 hover:bg-indigo-500;
 	}
 	.lettersWrapper {
-		@apply flex absolute bottom-0 gap-[5.78px] z-20  pointer-events-none;
+		@apply flex justify-between text-xs absolute bottom-0 w-full z-20  pointer-events-none;
 	}
 	.daysWrapper {
-		@apply flex absolute bottom-0 gap-[5.78px];
+		@apply flex justify-between absolute bottom-0 w-full;
 	}
 </style>
