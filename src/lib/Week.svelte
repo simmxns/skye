@@ -18,8 +18,8 @@
 
 <div class="days">
 	<div class="lettersWrapper">
-		<p class="letters">S</p>
-		<p class="letters">M</p>
+		<p class="letters">Ss</p>
+		<p class="letters">Mm</p>
 		<p class="letters">T</p>
 		<p class="letters">W</p>
 		<p class="letters">T</p>
