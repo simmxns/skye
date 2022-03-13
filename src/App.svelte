@@ -1,9 +1,9 @@
 <script>
 	import Header from '@lib/Header.svelte'
 	import Greet from '@lib/Greet.svelte'
-	import Card from '@lib/Card.svelte'
 	import Title from '@lib/Title.svelte';
 	import Week from '@lib/Week.svelte';
+	import Cards from '@lib/Cards.svelte'
 </script>
 
 <div id="app">
@@ -14,7 +14,7 @@
 	</div>
 	<div class="week">
 		<Week />
-		<Card />
+		<Cards />
 	</div>
 </div>
 

@@ -1,25 +1,8 @@
 <script>
-	const weather = {
-		timezone: 'Buenos Aires',
-		time: 'Sunday 20, 2022',
-		title: 'Partly cloudy',
-		temp: '29',
-		wind: '14.5',
-		humidity: '60',
-		feeling: '32'
-	}
-
-	const weatherIcons = {
-		party: 'https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png',
-		cloudy: 'https://ssl.gstatic.com/onebox/weather/48/cloudy.png',
-		sunny: 'https://ssl.gstatic.com/onebox/weather/48/sunny.png',
-		rainy: 'https://ssl.gstatic.com/onebox/weather/48/rain_light.png'
-	}
-	const src = weatherIcons['party']
-	const { time, timezone, title, temp, wind, humidity, feeling } = weather
+	export let timezone, time, temp, src, title, wind, humidity, feeling
+	
 </script>
 
-<div class="w-full flex flex-col items-center justify-center">
 	<div
 		class="flex items-center justify-evenly flex-col w-[88%] h-96 bg-black/8 shadow-global shadow-black/10 rounded-md backdrop-blur-[50px]"
 	>
@@ -58,4 +41,3 @@
 			</div>
 		</div>
 	</div>
-</div>
