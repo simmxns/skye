@@ -27,7 +27,7 @@
 	#app {
 		@apply 
 			font-poppins
-			w-full 
+			w-[375px] 
 			h-full 
 			aspect-[9/16] 
 			rounded-lg 
@@ -38,7 +38,8 @@
 			bg-center
 			bg-no-repeat
 			bg-cover
-			text-gray-200;
+			text-gray-200
+			overflow-hidden;
 	}
 	.week {
 		@apply 

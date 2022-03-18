@@ -3,7 +3,7 @@
  * @param {Event} e Event handling
  * @param {Element} element Element to be moved
  */
-export const getX = (e, element) => {
+export function getX(e, element) {
 	const x = e.target.offsetLeft
 	element.style.setProperty('left', `${x}px`)
 }

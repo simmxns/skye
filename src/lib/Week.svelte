@@ -1,18 +1,17 @@
 <script>
 	import E from '@helpers/getElement'
 	import { getX } from '@helpers/getX'
-	import { useCurrent } from '@hooks/useCurrent'
 	import { onMount } from 'svelte'
-
-	const { current, onCurrent } = useCurrent('monday')
+	import { setScrollIndex } from '@helpers/weekPosition'
 	
 	onMount(() => {
 		const index = E('#index')
+		const cards = E('#cards')
 	})
 
 	function onClickHandler(param) {
 		getX(event, index)
-		onCurrent(param)
+		setScrollIndex(param, cards)
 	}
 </script>
 
